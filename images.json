@@ -1,0 +1,309 @@
+{
+  "release": "images-20261021",
+  "platform": "linux/amd64",
+  "images": [
+    {
+      "service": "sem",
+      "image": "ceramics-algorithms/sem:20261021-7228e529190e",
+      "config_digest": "sha256:00a62bc6ef769dc6818488313577d8f4927d916ebb72a8bedb8b65a8f6a2a712",
+      "os": "linux",
+      "architecture": "amd64",
+      "layers": [
+        "sha256:1387079e86adf524e7e92bada71d261d9ff58f34409751ab36560385262a8386",
+        "sha256:e0892794b439be698511e2da49053eb61b1a166359792316712e3b2ebc377450",
+        "sha256:ecc2c2acca0e3a027442329324e919c203b7aba243bab5d9f7ce1c4835445658",
+        "sha256:6cf277c8c0d9dfebfee3145e395654d347b50d0dca88099bcc3b0d6dea73b14d",
+        "sha256:79a505675b9193c49f4b937408abe51c99342c44d3ddec137ee3bd0808ecae51",
+        "sha256:5e54899c0a6aba353533965e62623c87846fe08b01214798a82add2757c25c94",
+        "sha256:ae0e950c98c2bb28ae4eb2e8304056b02fa73b2d80b876883b0b5b1a51e5b996",
+        "sha256:718a94328b09f31980707a1faba122e59e625a84af12ccaf2213d8b03a697ce7",
+        "sha256:16b009a0e0fd81b7e8adf45e9b3d109edb3f1fb0779a295e3aedf80526ae9a2d",
+        "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+        "sha256:d35c6848d2f83cc0c626ba7a7127ed94c63b7849f01a8e218b50127a9ff63eee",
+        "sha256:0a83b487f8fe9aae02d7e4faf579e0f15380478095e367be5a79bf4ed2613e0a"
+      ],
+      "entrypoint": [
+        "conda",
+        "run",
+        "--no-capture-output",
+        "-n",
+        "sem"
+      ],
+      "command": [
+        "uvicorn",
+        "app.main:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8012"
+      ],
+      "exposed_ports": {}
+    },
+    {
+      "service": "bar",
+      "image": "plextract-bar-service:gpu-20261014",
+      "config_digest": "sha256:5530a0ef7211b61d124d31973c5dda54a59d1201e376dc942b60cd98c3744fed",
+      "os": "linux",
+      "architecture": "amd64",
+      "layers": [
+        "sha256:1387079e86adf524e7e92bada71d261d9ff58f34409751ab36560385262a8386",
+        "sha256:e0892794b439be698511e2da49053eb61b1a166359792316712e3b2ebc377450",
+        "sha256:ecc2c2acca0e3a027442329324e919c203b7aba243bab5d9f7ce1c4835445658",
+        "sha256:062de1c80cf602e448e178fa86373a9ee17acc7d1b077ac8f5192fa033dac00b",
+        "sha256:0ae68a647b3c861e824f4aecb55ce8b2ce373e263d6d0ec5fc8501a1cdaad7ab",
+        "sha256:24ff5e78f2c29e0e03976de79a232345357d655f4c97a42dbccad913bea11ef7",
+        "sha256:fb5850332681a5b7fef2a49c0f1a50a73dbec9c0ac709f1494b2f22c005e5f91",
+        "sha256:d38f6ce1aa5b14b1c8bedabbb5b496486c27b83d308cde6a70dc5580b2ea6ed1",
+        "sha256:f66ef9ba7f03567d33cd0714a1c12f7b45f763844bd365f491659990dcf317d0",
+        "sha256:1aa60c27b85a823a081ffae492e07eef67d29df70b508ff45ff5ad4b161cd6a4",
+        "sha256:bfbf452c2f53342d3037e20a035e3c93dc981401bad50e099ffb38ff1cac6587",
+        "sha256:b78dfdd71d608ae1cb73ce73076aeb279289f7a5b1ff63e049f3a6740268acc1",
+        "sha256:78308d488c991d99317f560a1410169f59daae16eb6e6f30e0f2e60adedcbeaa",
+        "sha256:aa7167e1f658378549cdb4dd04f2670e18b6286a64998b43712db9ca179a1d3b",
+        "sha256:8affe26dae8f72ca5b68cfb8d6191ee08e7c467b9b045241623c3e8e1e559c88",
+        "sha256:898c2f23a087ee7341b4393f59f02319e8e2342255282b7c1ea1670b89d24bf2",
+        "sha256:198bbc3a58565ae9fcae1f1ae1467e73e92834bf30b5405f52602e04930f4d1e",
+        "sha256:d7839b77342ccfb0bc6c7592ddb784ec272cf95f6876b36d7f0b2da9861193fd",
+        "sha256:031de0098a71cbf8762ab81baf9557aadcbc60fc1e670f8d1fff1a98992d288c",
+        "sha256:0cf420d12caf56c5a707f3d3fca9f08c68850f78878e96197d8e695c3b20b308",
+        "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+        "sha256:e2c514437893d5ad69fe86364980a74e23b5f19ac987ed4abb4da2f742845a97",
+        "sha256:928a8ebc9d69397acbc534d96e06d79a27add9c117005f86c6fc3117316b59fc",
+        "sha256:3aff38ebccca04568fc2002efba6ca920a4220c3ecdebea85821d882c9f1c193",
+        "sha256:e7fc45095b9422e48f834b6f460bae7ffbeb2d5b69ac4c1646888a2c02b5fecc",
+        "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+        "sha256:d17e2cd6fa64324d52e84ab786812084daf1bcfbc33c038fd47ce395ff4b9bdf",
+        "sha256:ba837b6b185d03c139ee20f6f18ce8f28943ae9b3c312b91fe14a4c7c0fe6dab",
+        "sha256:104c2b33c7d932fc106eb0c9cd1c7dccb67fee56f70081b85a41b9dc1ed2eb30",
+        "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+        "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+        "sha256:3f4a1e95f69ee5dc3619299b6159c16a56bf909a499746dbc27310674ce698ce",
+        "sha256:3660c336b73873681e6b63e7d6cdfa20761b705b0db30a25a8accd2a0be2c26e",
+        "sha256:d1bb49a21b977e8671f88aa2bc4d9cf1a7960a41ce42623ae4073ff080c51964",
+        "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+        "sha256:c5b95c67bcdb8fc3f12763148d707c71744f750831f4c594cce1bc681491afe8",
+        "sha256:235fa53fd5b9e60394abe280efeb7f5067fc887cfeeaf2286e98c063f553f4d9",
+        "sha256:c32caa096cc5e2db63b3fc931561d76bc009e4c3d42d1eb1de28d643e5d1eb96",
+        "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+      ],
+      "entrypoint": [
+        "conda",
+        "run",
+        "--no-capture-output",
+        "-n",
+        "curve"
+      ],
+      "command": [
+        "python",
+        "-m",
+        "uvicorn",
+        "bar_api:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "6262"
+      ],
+      "exposed_ports": {
+        "6262/tcp": {},
+        "8013/tcp": {}
+      }
+    },
+    {
+      "service": "xrd",
+      "image": "plextract-xrd-service:gpu-20260908",
+      "config_digest": "sha256:3d8f0838a305303c4dd31c11d4a7f038cc786a00598c89ba1bfd667dc9fca4d0",
+      "os": "linux",
+      "architecture": "amd64",
+      "layers": [
+        "sha256:1387079e86adf524e7e92bada71d261d9ff58f34409751ab36560385262a8386",
+        "sha256:e0892794b439be698511e2da49053eb61b1a166359792316712e3b2ebc377450",
+        "sha256:ecc2c2acca0e3a027442329324e919c203b7aba243bab5d9f7ce1c4835445658",
+        "sha256:062de1c80cf602e448e178fa86373a9ee17acc7d1b077ac8f5192fa033dac00b",
+        "sha256:0ae68a647b3c861e824f4aecb55ce8b2ce373e263d6d0ec5fc8501a1cdaad7ab",
+        "sha256:24ff5e78f2c29e0e03976de79a232345357d655f4c97a42dbccad913bea11ef7",
+        "sha256:fb5850332681a5b7fef2a49c0f1a50a73dbec9c0ac709f1494b2f22c005e5f91",
+        "sha256:d38f6ce1aa5b14b1c8bedabbb5b496486c27b83d308cde6a70dc5580b2ea6ed1",
+        "sha256:f66ef9ba7f03567d33cd0714a1c12f7b45f763844bd365f491659990dcf317d0",
+        "sha256:1aa60c27b85a823a081ffae492e07eef67d29df70b508ff45ff5ad4b161cd6a4",
+        "sha256:bfbf452c2f53342d3037e20a035e3c93dc981401bad50e099ffb38ff1cac6587",
+        "sha256:b78dfdd71d608ae1cb73ce73076aeb279289f7a5b1ff63e049f3a6740268acc1",
+        "sha256:78308d488c991d99317f560a1410169f59daae16eb6e6f30e0f2e60adedcbeaa",
+        "sha256:aa7167e1f658378549cdb4dd04f2670e18b6286a64998b43712db9ca179a1d3b",
+        "sha256:8affe26dae8f72ca5b68cfb8d6191ee08e7c467b9b045241623c3e8e1e559c88",
+        "sha256:898c2f23a087ee7341b4393f59f02319e8e2342255282b7c1ea1670b89d24bf2",
+        "sha256:198bbc3a58565ae9fcae1f1ae1467e73e92834bf30b5405f52602e04930f4d1e",
+        "sha256:d7839b77342ccfb0bc6c7592ddb784ec272cf95f6876b36d7f0b2da9861193fd",
+        "sha256:031de0098a71cbf8762ab81baf9557aadcbc60fc1e670f8d1fff1a98992d288c",
+        "sha256:0cf420d12caf56c5a707f3d3fca9f08c68850f78878e96197d8e695c3b20b308",
+        "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+        "sha256:e2c514437893d5ad69fe86364980a74e23b5f19ac987ed4abb4da2f742845a97",
+        "sha256:928a8ebc9d69397acbc534d96e06d79a27add9c117005f86c6fc3117316b59fc",
+        "sha256:3aff38ebccca04568fc2002efba6ca920a4220c3ecdebea85821d882c9f1c193",
+        "sha256:e7fc45095b9422e48f834b6f460bae7ffbeb2d5b69ac4c1646888a2c02b5fecc",
+        "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+        "sha256:d17e2cd6fa64324d52e84ab786812084daf1bcfbc33c038fd47ce395ff4b9bdf",
+        "sha256:ba837b6b185d03c139ee20f6f18ce8f28943ae9b3c312b91fe14a4c7c0fe6dab",
+        "sha256:104c2b33c7d932fc106eb0c9cd1c7dccb67fee56f70081b85a41b9dc1ed2eb30",
+        "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+      ],
+      "entrypoint": [
+        "conda",
+        "run",
+        "--no-capture-output",
+        "-n",
+        "curve"
+      ],
+      "command": [
+        "python",
+        "-m",
+        "uvicorn",
+        "xrd_api:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8013"
+      ],
+      "exposed_ports": {
+        "8013/tcp": {}
+      }
+    },
+    {
+      "service": "curve",
+      "image": "plextract-curve-service:local-20261009",
+      "config_digest": "sha256:bf277f1cb0e87813b17d39e3ec1c1503084a65fd52a8a0c05e5d60b4a9458a62",
+      "os": "linux",
+      "architecture": "amd64",
+      "layers": [
+        "sha256:1387079e86adf524e7e92bada71d261d9ff58f34409751ab36560385262a8386",
+        "sha256:e0892794b439be698511e2da49053eb61b1a166359792316712e3b2ebc377450",
+        "sha256:ecc2c2acca0e3a027442329324e919c203b7aba243bab5d9f7ce1c4835445658",
+        "sha256:062de1c80cf602e448e178fa86373a9ee17acc7d1b077ac8f5192fa033dac00b",
+        "sha256:0ae68a647b3c861e824f4aecb55ce8b2ce373e263d6d0ec5fc8501a1cdaad7ab",
+        "sha256:24ff5e78f2c29e0e03976de79a232345357d655f4c97a42dbccad913bea11ef7",
+        "sha256:fb5850332681a5b7fef2a49c0f1a50a73dbec9c0ac709f1494b2f22c005e5f91",
+        "sha256:d38f6ce1aa5b14b1c8bedabbb5b496486c27b83d308cde6a70dc5580b2ea6ed1",
+        "sha256:f66ef9ba7f03567d33cd0714a1c12f7b45f763844bd365f491659990dcf317d0",
+        "sha256:1aa60c27b85a823a081ffae492e07eef67d29df70b508ff45ff5ad4b161cd6a4",
+        "sha256:bfbf452c2f53342d3037e20a035e3c93dc981401bad50e099ffb38ff1cac6587",
+        "sha256:b78dfdd71d608ae1cb73ce73076aeb279289f7a5b1ff63e049f3a6740268acc1",
+        "sha256:78308d488c991d99317f560a1410169f59daae16eb6e6f30e0f2e60adedcbeaa",
+        "sha256:aa7167e1f658378549cdb4dd04f2670e18b6286a64998b43712db9ca179a1d3b",
+        "sha256:8affe26dae8f72ca5b68cfb8d6191ee08e7c467b9b045241623c3e8e1e559c88",
+        "sha256:898c2f23a087ee7341b4393f59f02319e8e2342255282b7c1ea1670b89d24bf2",
+        "sha256:198bbc3a58565ae9fcae1f1ae1467e73e92834bf30b5405f52602e04930f4d1e",
+        "sha256:d7839b77342ccfb0bc6c7592ddb784ec272cf95f6876b36d7f0b2da9861193fd",
+        "sha256:031de0098a71cbf8762ab81baf9557aadcbc60fc1e670f8d1fff1a98992d288c",
+        "sha256:0cf420d12caf56c5a707f3d3fca9f08c68850f78878e96197d8e695c3b20b308",
+        "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+        "sha256:e2c514437893d5ad69fe86364980a74e23b5f19ac987ed4abb4da2f742845a97",
+        "sha256:928a8ebc9d69397acbc534d96e06d79a27add9c117005f86c6fc3117316b59fc",
+        "sha256:3aff38ebccca04568fc2002efba6ca920a4220c3ecdebea85821d882c9f1c193",
+        "sha256:e7fc45095b9422e48f834b6f460bae7ffbeb2d5b69ac4c1646888a2c02b5fecc",
+        "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+        "sha256:d17e2cd6fa64324d52e84ab786812084daf1bcfbc33c038fd47ce395ff4b9bdf",
+        "sha256:ba837b6b185d03c139ee20f6f18ce8f28943ae9b3c312b91fe14a4c7c0fe6dab",
+        "sha256:104c2b33c7d932fc106eb0c9cd1c7dccb67fee56f70081b85a41b9dc1ed2eb30",
+        "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+        "sha256:5ec3f0b0888a779225019fb1c9a95b07c6f7415f4cdaf3b93c25773cc5715117",
+        "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+      ],
+      "entrypoint": [
+        "conda",
+        "run",
+        "--no-capture-output",
+        "-n",
+        "curve"
+      ],
+      "command": [
+        "python",
+        "-m",
+        "uvicorn",
+        "app.main:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8013"
+      ],
+      "exposed_ports": {
+        "8013/tcp": {}
+      }
+    }
+  ],
+  "archive": {
+    "name": "ceramics-four-images.tar",
+    "size": 14799165440,
+    "sha256": "acbee68925e869d527f9ce54cd5fb9e5873f25277ac50cb82f42a33ed47d126b"
+  },
+  "parts": [
+    {
+      "name": "ceramics-four-images.tar.part001",
+      "size": 1073741824,
+      "sha256": "90f742184deb8a095bd4282a7c28adf01530c74a42b304ed8609c1ee2287f86b"
+    },
+    {
+      "name": "ceramics-four-images.tar.part002",
+      "size": 1073741824,
+      "sha256": "3e72a58f7426b10c9e733f9a5814258b9d6418580d944683a164d9588dd491d8"
+    },
+    {
+      "name": "ceramics-four-images.tar.part003",
+      "size": 1073741824,
+      "sha256": "c994608fd444e3aa5604d42b1c0f3bff39c940886f6dfbb35b9f0d0c6b6abb1c"
+    },
+    {
+      "name": "ceramics-four-images.tar.part004",
+      "size": 1073741824,
+      "sha256": "fdd47ab53cc482fb711c18a92c2e8f0d006c9d1776cf2b022d96ce219dc38a2b"
+    },
+    {
+      "name": "ceramics-four-images.tar.part005",
+      "size": 1073741824,
+      "sha256": "d012cfa7e6776b7d2f7e43ffa74be80e7e1cf9e70284dd0f7c026f988cb23619"
+    },
+    {
+      "name": "ceramics-four-images.tar.part006",
+      "size": 1073741824,
+      "sha256": "4f19cdc5d16c51c5e5fb47804745ffce2143c1e7bb2d63f1e4b6a13157fc7f23"
+    },
+    {
+      "name": "ceramics-four-images.tar.part007",
+      "size": 1073741824,
+      "sha256": "67621885f488380312d2ac0edd5fd971e5ed735543bc45bffe16bba2074669e4"
+    },
+    {
+      "name": "ceramics-four-images.tar.part008",
+      "size": 1073741824,
+      "sha256": "369b2cd10be8b6c49640717bfb78dbc5fe6522f5774dca076039382e721ba889"
+    },
+    {
+      "name": "ceramics-four-images.tar.part009",
+      "size": 1073741824,
+      "sha256": "8cbffe3f80afb33033937550bcdb28e272549cf94a1ee319487de7781fb7c45f"
+    },
+    {
+      "name": "ceramics-four-images.tar.part010",
+      "size": 1073741824,
+      "sha256": "d18734ec4d67122a9eceed6098265a10ac2797b14dc8650b6a26370763de8b2a"
+    },
+    {
+      "name": "ceramics-four-images.tar.part011",
+      "size": 1073741824,
+      "sha256": "dddd981e9ba500c73d2f05cb14e98ad1a7af36ab2dccc71098814c0858d7c668"
+    },
+    {
+      "name": "ceramics-four-images.tar.part012",
+      "size": 1073741824,
+      "sha256": "d1e6d5702d362f354fdfddb279a583c413192d44479b028a6fd9218113a40771"
+    },
+    {
+      "name": "ceramics-four-images.tar.part013",
+      "size": 1073741824,
+      "sha256": "e06198043741e160a0b5ef02a3d13f02fca95356c403f32d04d4d63cb97ae4e6"
+    },
+    {
+      "name": "ceramics-four-images.tar.part014",
+      "size": 840521728,
+      "sha256": "c7cdc15f6019efa44b667e5462a68f0c166c1ab98f19b3837aa411034145da8d"
+    }
+  ]
+}
