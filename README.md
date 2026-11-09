@@ -19,7 +19,7 @@ python import_images.py /path/to/downloads
 python import_images.py /path/to/downloads --verify-only
 ```
 
-需要 Python 3.8+ 和可访问的 Docker Engine。脚本先校验每卷大小与 SHA-256，再按编号流式传给 `docker load`，最后核对四个镜像的配置摘要。无需拼接额外的大文件。分卷总大小为 13.78 GiB，Docker 解压后的占用更大；三个 GPU 镜像共享基础层。
+需要 Python 3.8+ 和可访问的 Docker Engine。脚本先校验每卷大小与 SHA-256，再按编号流式传给 `docker load`，最后核对四个镜像的平台与有序文件层摘要。无需拼接额外的大文件。分卷总大小为 13.78 GiB，Docker 解压后的占用更大；三个 GPU 镜像共享基础层。
 
 也可在 Linux 下手动导入：
 
