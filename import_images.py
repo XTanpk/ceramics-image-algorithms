@@ -43,9 +43,14 @@ def main():
     if digest.hexdigest() != manifest['archive']['sha256']:
         raise SystemExit('Combined archive checksum mismatch')
     for image in manifest['images']:
-        actual = subprocess.check_output(['docker','image','inspect','--format','{{.Id}}',image['image']],text=True).strip()
-        if actual != image['config_digest']:
-            raise SystemExit('Image digest mismatch: '+image['image'])
+        actual = json.loads(subprocess.check_output(['docker','image','inspect',image['image']],text=True))[0]
+        if actual['Os'] != image['os'] or actual['Architecture'] != image['architecture']:
+            raise SystemExit('Image platform mismatch: '+image['image'])
+        if actual['RootFS']['Layers'] != image['layers']:
+            raise SystemExit('Image layer digest mismatch: '+image['image'])
+        # Docker Engine reports a config ID; containerd-backed Docker Desktop may
+        # report an OCI manifest/index ID instead. The verified archive contains
+        # the config, and ordered uncompressed layer digests work on both stores.
         print('Imported and verified', image['image'])
 
 if __name__ == '__main__':
